@@ -1,0 +1,218 @@
+{
+  "slug": "osn1-nrgaaa",
+  "instagram_reviews_url": "https://www.instagram.com/comfort_time.official/",
+  "city_options": [
+    "Актау",
+    "Актобе",
+    "Алматы",
+    "Астана",
+    "Атырау",
+    "Балхаш",
+    "Жанаозен",
+    "Жезказган",
+    "Караганда",
+    "Конаев",
+    "Костанай",
+    "Кызылорда",
+    "Ленгер",
+    "Павлодар",
+    "Петропавловск",
+    "Риддер",
+    "Рудный",
+    "Сатпаев",
+    "Семей",
+    "Талдыкорган",
+    "Тараз",
+    "Темиртау",
+    "Туркестан",
+    "Уральск",
+    "Усть-Каменогорск",
+    "Шу",
+    "Шымкент",
+    "Экибастуз"
+  ],
+  "banks": [
+    {
+      "id": 1,
+      "name_ru": "Отбасы банк",
+      "name_kk": "Отбасы банк",
+      "abbr": "ОБ",
+      "color": "#1a6f3c",
+      "logo_url": "https://hcsbk.kz/upload/iblock/861/k28qfspkdkp9ra6um45d12p8o4vqabc7.jpg",
+      "is_active": true,
+      "display_order": 1
+    },
+    {
+      "id": 2,
+      "name_ru": "Халык Банк",
+      "name_kk": "Халық Банк",
+      "abbr": "ХБ",
+      "color": "#d4271b",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAxDA1WOWjoCXQIVSuU4KOZEfSO9a0oVEbCw&s",
+      "is_active": true,
+      "display_order": 2
+    },
+    {
+      "id": 3,
+      "name_ru": "БЦК",
+      "name_kk": "БЦК",
+      "abbr": "БЦК",
+      "color": "#004b8d",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVH5SqS4lDY4T42ZXxJPXsrRDmQlRiS-2Rrg&s",
+      "is_active": true,
+      "display_order": 3
+    },
+    {
+      "id": 5,
+      "name_ru": "Bereke Bank",
+      "name_kk": "Bereke Bank",
+      "abbr": "BB",
+      "color": "#7c3aed",
+      "logo_url": "https://img.forbes.kz/forbes-photobank/media/2024-06-10/cb12fcb4-d524-480f-839f-229e446762cf.webp",
+      "is_active": true,
+      "display_order": 4
+    },
+    {
+      "id": 6,
+      "name_ru": "ForteBank",
+      "name_kk": "ForteBank",
+      "abbr": "FB",
+      "color": "#059669",
+      "logo_url": "https://avatars.mds.yandex.net/i?id=768b01d522c0d9a50af43cd19ab434890ffd4933-10917150-images-thumbs&n=13",
+      "is_active": true,
+      "display_order": 5
+    },
+    {
+      "id": 7,
+      "name_ru": "Freedom Bank",
+      "name_kk": "Freedom Bank",
+      "abbr": "FR",
+      "color": "#0284c7",
+      "logo_url": "https://avatars.mds.yandex.net/i?id=bc49ed30294af42cee14956b849b98615fcfdd7c-5709069-images-thumbs&n=13",
+      "is_active": true,
+      "display_order": 6
+    },
+    {
+      "id": 8,
+      "name_ru": "Bank RBK",
+      "name_kk": "Bank RBK",
+      "abbr": "RBK",
+      "color": "#dc2626",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn4dfshyZLdJ_QU9vbigfXUZSeRYwJcuinfA&s",
+      "is_active": true,
+      "display_order": 7
+    },
+    {
+      "id": 9,
+      "name_ru": "Нур-Банк",
+      "name_kk": "Нұр-Банк",
+      "abbr": "НБ",
+      "color": "#b45309",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_0dcwCb0PB_mcwwKvmoNwh_odruS_DuLXA&s",
+      "is_active": true,
+      "display_order": 8
+    }
+  ],
+  "branches": [
+    {
+      "id": 11,
+      "name": "Актобе, Әбілқайыр хан",
+      "city": "Актобе",
+      "address": "Проспект Әбілқайыр хан, 69.",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 6,
+      "name": "Алматы, Төле би",
+      "city": "Алматы",
+      "address": "Улица Төле би, 243/1.",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 7,
+      "name": "Алматы, Шәмші Қалдаяқов",
+      "city": "Алматы",
+      "address": "Улица Шәмші Қалдаяқов, 41.",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 39,
+      "name": "Астана, филиал Мангилик",
+      "city": "Астана",
+      "address": "Проспект Мангилик ел 52, НП 18 ЖК \"Promenade EXPO\"",
+      "working_hours": "Пн-пт 09:00-20:00, сб-вс 09:00-18:00",
+      "schedule_key": "astana_mangilik_el",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 4,
+      "name": "Астана, филиал Фаворит",
+      "city": "Астана",
+      "address": "Проспект Бөгенбай батыр, 56А, БЦ «Фаворит», 13 этаж, офис 1302.",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 5,
+      "name": "Астана, Центральный филиал",
+      "city": "Астана",
+      "address": "Проспект Р. Қошқарбаев, 56.",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 38,
+      "name": "Атырау",
+      "city": "Атырау",
+      "address": "ул. Исатая Тайманова, 1/2, 4 этаж, кабинет 405. БЦ Noble Square",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 9,
+      "name": "Семей, Мәңгілік Ел",
+      "city": "Семей",
+      "address": "Улица Мәңгілік Ел, 10.",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 10,
+      "name": "Тараз, Төле би",
+      "city": "Тараз",
+      "address": "Улица Төле би, 34, БЦ «ASKHAT PLAZA», 2 этаж, кабинет 206.",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    },
+    {
+      "id": 8,
+      "name": "Шымкент, Желтоқсан",
+      "city": "Шымкент",
+      "address": "Улица Желтоқсан, 75, БЦ «JELTOQSAN».",
+      "working_hours": "Пн-пт 10:00-19:00, сб 11:00-17:00, вс выходной",
+      "schedule_key": "default",
+      "landmark": null,
+      "map_url": null
+    }
+  ]
+}

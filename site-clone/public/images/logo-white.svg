@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <mask id="cut">
+      <rect width="100" height="100" fill="#fff"/>
+      <polygon points="-2,70 50,32.4 102,70 102,94 50,56 -2,94" fill="#000"/>
+    </mask>
+  </defs>
+  <path d="M 77 31.1 A 33 33 0 1 0 77 68.9" fill="none" stroke="#ffffff" stroke-width="17" mask="url(#cut)"/>
+  <polygon points="2,75.6 50,37.6 98,75.6 98,88.4 50,50.4 2,88.4" fill="#E9B33B"/>
+</svg>

@@ -1,0 +1,12 @@
+{
+  "name": "comfort-time-clone",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "format": "npx prettier --write \"css/**/*.css\" \"js/**/*.js\" \"*.html\""
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  }
+}
