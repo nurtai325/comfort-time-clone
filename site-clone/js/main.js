@@ -687,29 +687,17 @@ async function submitStep1() {
   btn.disabled = true;
   btn.innerHTML = '<div class="lc-spinner"></div>';
 
-  try {
-    if (!state.visitSent) {
-      await _api('POST', '/public/lead-capture/' + SLUG + '/visit', { visitor_uid: state.visitUid }).catch(function() {});
-      state.visitSent = true;
-    }
-    const phoneNorm = digits.length === 10 ? '7' + digits : digits;
-    const res = await _api('POST', '/public/lead-capture/' + SLUG + '/phone', {
-      phone: phoneNorm,
-      offer_accepted: state.offerAccepted,
-      visitor_uid: state.visitUid,
-      form_language: state.lang,
-      landing_version: state.abVariant,
-    });
-    state.clientToken = res.client_token;
-    state.score = 20;
-    _save();
-    _track('step_1_completed', { step: 1 });
-    renderStep15();
-  } catch (err) {
-    btn.disabled = false;
-    btn.textContent = t('s1.cta');
-    _showAlert(btn.parentNode, btn, err.message || 'Ошибка. Попробуйте снова.');
+  if (!state.visitSent) {
+    _api('POST', '/public/lead-capture/' + SLUG + '/visit', { visitor_uid: state.visitUid })
+      .then(function() { state.visitSent = true; _save(); })
+      .catch(function() {});
   }
+  const phoneNorm = digits.length === 10 ? '7' + digits : digits;
+  state.phone = phoneNorm;
+  state.score = 20;
+  _save();
+  _track('step_1_completed', { step: 1 });
+  renderStep15();
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -764,7 +752,7 @@ function _citySelectOptions(selected, placeholderKey) {
   return placeholder + options;
 }
 
-async function selectProduct(product) {
+function selectProduct(product) {
   state.product = product;
   state.credit_burden_status = null;
   if (product === 'credit') {
@@ -777,16 +765,6 @@ async function selectProduct(product) {
   }
   _save();
   _track('product_selected', { product });
-  if (state.clientToken) {
-    try {
-      await _api('PATCH', '/public/lead-capture/leads/' + state.clientToken + '/service-type', {
-        service_type: product,
-        form_language: state.lang,
-      });
-    } catch (error) {
-      _track('product_service_type_failed', { product, error: error.message || 'unknown' });
-    }
-  }
   renderStep2();
 }
 
@@ -908,27 +886,10 @@ async function submitStep2() {
   state.city = normalizedCity;
   state.targetCity = normalizedTargetCity;
 
-  const btn = document.getElementById('lc-s2-submit');
-  btn.disabled = true;
-  btn.innerHTML = '<div class="lc-spinner"></div>';
-
-  try {
-    await _api('PATCH', '/public/lead-capture/leads/' + state.clientToken + '/profile', {
-      full_name: state.name.trim(),
-      city: state.city,
-      target_city: state.targetCity,
-      form_language: state.lang,
-      service_type: state.product,
-    });
-    state.score = Math.max(state.score, 35);
-    _save();
-    _track('step_2_completed', { step: 2 });
-    renderStep3();
-  } catch (err) {
-    btn.disabled = false;
-    btn.textContent = t('s2.cta');
-    _showAlert(btn.parentNode, btn, err.message || 'Ошибка. Попробуйте снова.');
-  }
+  state.score = Math.max(state.score, 35);
+  _save();
+  _track('step_2_completed', { step: 2 });
+  renderStep3();
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1278,7 +1239,6 @@ async function submitStep3() {
 
   const errEl = document.getElementById('lc-q-err');
   if (!q1val || !q2val || !q3val || !q4val) { errEl.classList.add('visible'); return; }
-  if (!state.clientToken) { renderStep1(); return; }
   errEl.classList.remove('visible');
 
   const finalScore = _calcScore();
@@ -1302,23 +1262,28 @@ async function submitStep3() {
   document.getElementById('lc-topbar').hidden = true;
   document.getElementById('lc-score-bar').hidden = true;
 
-  const quizPayload = {
+  const payload = {
+    phone: state.phone,
+    full_name: state.name.trim(),
+    city: state.city,
+    target_city: state.targetCity,
+    service_type: state.product,
+    form_language: state.lang,
+    offer_accepted: state.offerAccepted,
+    visitor_uid: state.visitUid,
+    landing_version: state.abVariant,
     delinquency_status: q1val,
     down_payment_status: q2val,
     down_payment_percent_range: (q2val && q2val !== 'none') ? q2val : null,
-    down_payment_amount: null,
     income_confirmation_type: q3val,
     monthly_income_status: _isCredit() ? q3val : null,
     credit_income_range: _isCredit() ? q3val : null,
     credit_burden_status: q4val,
     preapproval_score: state.score,
-    form_language: state.lang,
-    service_type: state.product,
   };
 
   try {
-    const res = await _api('PATCH', '/public/lead-capture/leads/' + state.clientToken + '/quiz', quizPayload);
-    /* Use server analysis if available, fallback to local */
+    const res = await _api('POST', '/public/lead-capture/' + SLUG + '/submit', payload);
     if (res && res.score_category) {
       state.analysisResult = {
         score_category: res.score_category,
@@ -1329,18 +1294,15 @@ async function submitStep3() {
     } else {
       state.analysisResult = _localAnalysis(state.score);
     }
-    _track('step_3_completed', { step: 3, score: state.score });
-    state.step = 3.5;
-    _save();
-    await new Promise(function(r) { setTimeout(r, 1200); });
-    renderAnalysisResult();
   } catch (err) {
     state.analysisResult = _localAnalysis(state.score);
-    state.step = 3.5;
-    _save();
-    await new Promise(function(r) { setTimeout(r, 1200); });
-    renderAnalysisResult();
   }
+
+  _track('step_3_completed', { step: 3, score: state.score });
+  state.step = 3.5;
+  _save();
+  await new Promise(function(r) { setTimeout(r, 1200); });
+  renderAnalysisResult();
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1415,13 +1377,6 @@ function renderAnalysisResult() {
 
   _track('analysis_result_viewed', { score: score, category: cat });
   _clearStorage();
-
-  if (state.clientToken) {
-    _api('POST', '/public/lead-capture/leads/' + state.clientToken + '/callback-request', {
-      form_language: state.lang,
-      service_type: state.product,
-    }).catch(function() {});
-  }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1509,7 +1464,7 @@ async function boot() {
   } catch (_) {}
 
   const s = state.step;
-  if (state.clientToken && s >= 1.5) {
+  if (state.phone && s >= 1.5) {
     if      (s === 1.5) renderStep15();
     else if (s === 2)   renderStep2();
     else if (s === 3)   renderStep3();

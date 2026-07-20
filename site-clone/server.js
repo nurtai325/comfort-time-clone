@@ -49,47 +49,14 @@ app.post('/public/lead-capture/:slug/visit', (req, res) => {
   res.json({ ok: true });
 });
 
-/* ── Phone → create lead ────────────────────────────────────── */
-app.post('/public/lead-capture/:slug/phone', (req, res) => {
-  const { phone } = req.body;
+/* ── Submit (single call with all lead data) ────────────────── */
+app.post('/public/lead-capture/:slug/submit', (req, res) => {
+  const { phone, preapproval_score } = req.body;
   if (!phone) return res.status(422).json({ detail: 'phone required' });
-  const client_token = token();
-  leads.set(client_token, { phone, slug: req.params.slug, step: 'phone' });
-  res.json({ client_token });
-});
-
-/* ── Service type ───────────────────────────────────────────── */
-app.patch('/public/lead-capture/leads/:token/service-type', (req, res) => {
-  const lead = leads.get(req.params.token);
-  if (!lead) return res.status(404).json({ detail: 'not found' });
-  lead.service_type = req.body.service_type;
-  res.json({ ok: true });
-});
-
-/* ── Profile ────────────────────────────────────────────────── */
-app.patch('/public/lead-capture/leads/:token/profile', (req, res) => {
-  const lead = leads.get(req.params.token);
-  if (!lead) return res.status(404).json({ detail: 'not found' });
-  Object.assign(lead, req.body);
-  res.json({ ok: true });
-});
-
-/* ── Quiz → return analysis ─────────────────────────────────── */
-app.patch('/public/lead-capture/leads/:token/quiz', (req, res) => {
-  const lead = leads.get(req.params.token);
-  if (!lead) return res.status(404).json({ detail: 'not found' });
-  const score = req.body.preapproval_score || 35;
-  Object.assign(lead, req.body);
-  res.json(computeAnalysis(score));
-});
-
-/* ── Callback request ───────────────────────────────────────── */
-app.post('/public/lead-capture/leads/:token/callback-request', (req, res) => {
-  const lead = leads.get(req.params.token);
-  if (!lead) return res.status(404).json({ detail: 'not found' });
-  Object.assign(lead, req.body);
-  lead.step = 'callback_requested';
-  res.json({ ok: true });
+  const id = token();
+  leads.set(id, { ...req.body, slug: req.params.slug, submitted_at: new Date().toISOString() });
+  const score = preapproval_score || 35;
+  res.json({ id, ...computeAnalysis(score) });
 });
 
 const PORT = process.env.PORT || 3000;
