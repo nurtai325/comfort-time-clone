@@ -196,7 +196,7 @@ const URL_PARAMS = new URLSearchParams(window.location.search || '');
 const STORAGE_KEY = 'lc_' + SLUG;
 
 const state = {
-  lang: 'ru',
+  lang: 'kk',
   step: 1,
   product: null,  /* 'mortgage' | 'credit' */
   phone: '',
