@@ -83,13 +83,13 @@ app.patch('/public/lead-capture/leads/:token/quiz', (req, res) => {
   res.json(computeAnalysis(score));
 });
 
-/* ── Appointment ────────────────────────────────────────────── */
-app.post('/public/lead-capture/leads/:token/appointment', (req, res) => {
+/* ── Callback request ───────────────────────────────────────── */
+app.post('/public/lead-capture/leads/:token/callback-request', (req, res) => {
   const lead = leads.get(req.params.token);
   if (!lead) return res.status(404).json({ detail: 'not found' });
   Object.assign(lead, req.body);
-  lead.step = 'booked';
-  res.json({ ok: true, appointment_id: crypto.randomBytes(8).toString('hex') });
+  lead.step = 'callback_requested';
+  res.json({ ok: true });
 });
 
 const PORT = process.env.PORT || 3000;

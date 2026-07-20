@@ -68,47 +68,33 @@ const I18N = {
     's35.programs': 'Предварительно найдено {n} подходящих программ',
     's35.legal':    'Подбор является предварительным. Точные условия и решение определяются после консультации и проверки документов.',
     's35.cta':      'Продолжить к записи →',
-    's4.kicker':    'Встреча',
-    's4.title':     'Выберите удобный офис и время консультации',
-    's4.subtitle':  'Выберите филиал, дату и время. Мы подготовим специалиста к вашему визиту.',
-    's4.branch.hint': 'Сначала выберите удобный филиал',
-    's4.date.hint':   'Теперь выберите удобную дату',
-    's4.time.hint':   'Выберите удобное время',
-    's4.branch.label': 'Шаг 1 — Выберите офис',
-    's4.date.label':   'Шаг 2 — Выберите дату',
-    's4.time.label':   'Шаг 3 — Выберите время',
-    's4.rail.branch':  'Офис',
-    's4.rail.date':    'Дата',
-    's4.rail.time':    'Время',
-    's4.primer.title': 'Осталось выбрать посещение',
-    's4.primer.text':  'Идите по шагам ниже: сначала офис, затем дата, затем время. Активный блок подсвечен оранжевым.',
-    's4.branch.choose':'Выбрать этот офис',
-    's4.branch.selected':'Офис выбран',
-    's4.date.today':   'Сегодня',
-    's4.date.tomorrow':'Завтра',
-    's4.date.other':   'Другая дата',
-    's4.nolocal':      'В вашем городе пока нет офиса. Выберите ближайший:',
-    's4.nobranch':     'Нет доступных офисов.',
-    's4.summary.title':'Ваша консультация',
-    's4.summary.branch': 'Офис',
-    's4.summary.date':   'Дата',
-    's4.summary.time':   'Время',
-    's4.summary.addr':   'Адрес',
-    's4.summary.name':   'Имя',
-    's4.summary.phone':  'Телефон',
-    's4.cta':       'Закрепить время →',
-    's4.err.branch':'Выберите офис',
-    's4.err.date':  'Выберите дату',
-    's4.err.time':  'Выберите время',
-    'success.title':    'Вы записаны!',
-    'success.sub':      'Мы ждём вас в офисе',
-    'success.branch':   'Офис',
-    'success.datetime': 'Дата и время',
-    'success.name':     'Имя',
-    'success.note':     'Наш менеджер свяжется с вами для подтверждения.',
-    'success.ig':       'Смотрите отзывы в Instagram',
-    'success.wa':       'Проверка кредитной истории близких',
-    'success.wa.msg':   'Проверь вероятность одобрения ипотеки онлайн, бесплатно за 2 минуты 👉 ',
+    's4.kicker':       'Последний шаг',
+    's4.title':        'Когда вам удобно позвонить?',
+    's4.subtitle':     'Наш специалист свяжется с вами в удобное время и проконсультирует бесплатно.',
+    's4.calltime.label': 'Удобное время для звонка',
+    's4.calltime.morning':   'Утром (9:00–12:00)',
+    's4.calltime.afternoon': 'Днём (12:00–17:00)',
+    's4.calltime.evening':   'Вечером (17:00–20:00)',
+    's4.calltime.any':       'В любое время',
+    's4.summary.title': 'Ваша заявка',
+    's4.summary.name':  'Имя',
+    's4.summary.phone': 'Телефон',
+    's4.summary.city':  'Город',
+    's4.summary.product': 'Продукт',
+    's4.summary.calltime': 'Время звонка',
+    's4.product.mortgage': 'Ипотека',
+    's4.product.credit':   'Кредит',
+    's4.cta':          'Отправить заявку →',
+    's4.err.calltime': 'Выберите удобное время',
+    'success.title':   'Заявка принята!',
+    'success.sub':     'Специалист свяжется с вами в ближайшее рабочее время',
+    'success.name':    'Имя',
+    'success.phone':   'Телефон',
+    'success.calltime':'Время звонка',
+    'success.note':    'Если вопросы срочные — напишите нам в Instagram.',
+    'success.ig':      'Написать в Instagram',
+    'success.wa':      'Проверка кредитной истории близких',
+    'success.wa.msg':  'Проверь вероятность одобрения ипотеки онлайн, бесплатно за 2 минуты 👉 ',
     'toast.q1': '+балл за историю кредитов',
     'toast.q2': '+балл за первоначальный взнос',
     'toast.q3': '+балл за подтверждение дохода',
@@ -127,8 +113,8 @@ const I18N = {
     'assist.auto.seconds': 'сек',
     'assist.product.title': 'Продолжим по ипотеке, если клиент не выбрал сам',
     'assist.product.caption': 'Ипотека выбрана по умолчанию, чтобы заявка не останавливалась.',
-    'assist.banks.title': 'Следующий шаг - запись в офис',
-    'assist.banks.caption': 'Подбор предварительный. Следующий шаг - выбрать офис и время.',
+    'assist.banks.title': 'Следующий шаг — оставить заявку',
+    'assist.banks.caption': 'Подбор предварительный. Специалист свяжется с вами и подберёт лучшие условия.',
   },
   kk: {
     'score.label':  'Алдын ала дайындық',
@@ -195,47 +181,33 @@ const I18N = {
     's35.programs': 'Алдын ала {n} сәйкес бағдарлама табылды',
     's35.legal':    'Іріктеу алдын ала болып табылады. Нақты шарттар мен шешім кеңестен кейін анықталады.',
     's35.cta':      'Жазылуға өту →',
-    's4.kicker':    'Кездесу',
-    's4.title':     'Ыңғайлы кеңсе мен кеңес алу уақытын таңдаңыз',
-    's4.subtitle':  'Филиалды, күнді және уақытты таңдаңыз. Сіздің келуіңізге маман дайындаймыз.',
-    's4.branch.hint': 'Алдымен ыңғайлы филиалды таңдаңыз',
-    's4.date.hint':   'Енді ыңғайлы күнді таңдаңыз',
-    's4.time.hint':   'Ыңғайлы уақытты таңдаңыз',
-    's4.branch.label': '1-қадам — Кеңсені таңдаңыз',
-    's4.date.label':   '2-қадам — Күнді таңдаңыз',
-    's4.time.label':   '3-қадам — Уақытты таңдаңыз',
-    's4.rail.branch':  'Кеңсе',
-    's4.rail.date':    'Күн',
-    's4.rail.time':    'Уақыт',
-    's4.primer.title': 'Келу уақытын таңдаңыз',
-    's4.primer.text':  'Төмендегі қадамдармен өтіңіз: алдымен кеңсе, кейін күн, кейін уақыт. Белсенді блок қызғылт түспен белгіленген.',
-    's4.branch.choose':'Осы кеңсені таңдау',
-    's4.branch.selected':'Кеңсе таңдалды',
-    's4.date.today':   'Бүгін',
-    's4.date.tomorrow':'Ертең',
-    's4.date.other':   'Басқа күн',
-    's4.nolocal':      'Сіздің қалаңызда кеңсе жоқ. Жақын кеңседен таңдаңыз:',
-    's4.nobranch':     'Қолжетімді кеңселер жоқ.',
-    's4.summary.title':'Сіздің кеңесіңіз',
-    's4.summary.branch': 'Кеңсе',
-    's4.summary.date':   'Күн',
-    's4.summary.time':   'Уақыт',
-    's4.summary.addr':   'Мекенжай',
-    's4.summary.name':   'Аты',
-    's4.summary.phone':  'Телефон',
-    's4.cta':       'Уақытты бекіту →',
-    's4.err.branch':'Кеңсені таңдаңыз',
-    's4.err.date':  'Күнді таңдаңыз',
-    's4.err.time':  'Уақытты таңдаңыз',
-    'success.title':    'Жазылдыңыз!',
-    'success.sub':      'Сізді кеңседе күтеміз',
-    'success.branch':   'Кеңсе',
-    'success.datetime': 'Күн мен уақыт',
-    'success.name':     'Аты',
-    'success.note':     'Менеджеріміз растау үшін сізбен байланысады.',
-    'success.ig':       'Instagram-дағы пікірлерді қараңыз',
-    'success.wa':       'Жақындарыңыздың несие тарихын тексеру',
-    'success.wa.msg':   'Ипотеканы мақұлдау ықтималдығын онлайн тексер, 2 минутта тегін 👉 ',
+    's4.kicker':       'Соңғы қадам',
+    's4.title':        'Қоңырау шалу үшін ыңғайлы уақыт қандай?',
+    's4.subtitle':     'Сарапшымыз ыңғайлы уақытта хабарласып, тегін кеңес береді.',
+    's4.calltime.label': 'Қоңырауға ыңғайлы уақыт',
+    's4.calltime.morning':   'Таңертең (9:00–12:00)',
+    's4.calltime.afternoon': 'Күндізі (12:00–17:00)',
+    's4.calltime.evening':   'Кешке (17:00–20:00)',
+    's4.calltime.any':       'Кез келген уақытта',
+    's4.summary.title': 'Сіздің өтінімі',
+    's4.summary.name':  'Аты',
+    's4.summary.phone': 'Телефон',
+    's4.summary.city':  'Қала',
+    's4.summary.product': 'Өнім',
+    's4.summary.calltime': 'Қоңырау уақыты',
+    's4.product.mortgage': 'Ипотека',
+    's4.product.credit':   'Несие',
+    's4.cta':          'Өтінімді жіберу →',
+    's4.err.calltime': 'Ыңғайлы уақытты таңдаңыз',
+    'success.title':   'Өтінім қабылданды!',
+    'success.sub':     'Сарапшы жұмыс уақытында хабарласады',
+    'success.name':    'Аты',
+    'success.phone':   'Телефон',
+    'success.calltime':'Қоңырау уақыты',
+    'success.note':    'Сұрақтар шұғыл болса — Instagram-да жазыңыз.',
+    'success.ig':      'Instagram-да жазу',
+    'success.wa':      'Жақындарыңыздың несие тарихын тексеру',
+    'success.wa.msg':  'Ипотеканы мақұлдау ықтималдығын онлайн тексер, 2 минутта тегін 👉 ',
     'toast.q1': '+ұпай несие тарихы үшін',
     'toast.q2': '+ұпай бастапқы жарна үшін',
     'toast.q3': '+ұпай кіріс расталуы үшін',
@@ -254,8 +226,8 @@ const I18N = {
     'assist.auto.seconds': 'сек',
     'assist.product.title': 'Клиент өзі таңдамаса, ипотекамен жалғастырамыз',
     'assist.product.caption': 'Өтінім тоқтап қалмауы үшін ипотека әдепкі таңдау.',
-    'assist.banks.title': 'Келесі қадам - офиске жазылу',
-    'assist.banks.caption': 'Іріктеу алдын ала. Келесі қадам - офис пен уақыт таңдау.',
+    'assist.banks.title': 'Келесі қадам — өтінім қалдыру',
+    'assist.banks.caption': 'Іріктеу алдын ала. Сарапшы хабарласып, ең жақсы шарттарды ұсынады.',
   },
 };
 
@@ -273,10 +245,7 @@ let KZ_CITIES = [
 /* ── State ──────────────────────────────────────────────────── */
 const SLUG = window.__LEAD_SLUG__ || document.body.dataset.slug || '';
 const URL_PARAMS = new URLSearchParams(window.location.search || '');
-const INITIAL_MODE = URL_PARAMS.get('mode') || '';
-const INITIAL_CLIENT_TOKEN = URL_PARAMS.get('client_token') || '';
-const IS_APPOINTMENT_ONLY = INITIAL_MODE === 'appointment' && INITIAL_CLIENT_TOKEN.length > 8;
-const STORAGE_KEY = 'lc_' + SLUG + (IS_APPOINTMENT_ONLY ? '_' + INITIAL_CLIENT_TOKEN : '');
+const STORAGE_KEY = 'lc_' + SLUG;
 
 const state = {
   lang: 'ru',
@@ -302,13 +271,8 @@ const state = {
   credit_burden_status: null,
   /* analysis result (step 3.5) */
   analysisResult: null,
-  /* step 4 booking */
-  bookingStage: 'branch_required',
-  appointmentOnly: IS_APPOINTMENT_ONLY,
-  selectedBranch: null,
-  selectedDate: null,
-  selectedTime: null,
-  bookingIntroSeen: false,
+  /* step 4 callback */
+  selectedCalltime: null,
   /* config */
   score: 20,
   banks: [],
@@ -336,11 +300,7 @@ function _save() {
       credit_income_range: state.credit_income_range,
       credit_burden_status: state.credit_burden_status,
       analysisResult: state.analysisResult,
-      bookingStage: state.bookingStage,
-      selectedBranch: state.selectedBranch,
-      selectedDate: state.selectedDate,
-      selectedTime: state.selectedTime,
-      bookingIntroSeen: state.bookingIntroSeen,
+      selectedCalltime: state.selectedCalltime,
       score: state.score, lang: state.lang,
       visitUid: state.visitUid, abVariant: state.abVariant,
     }));
@@ -587,134 +547,6 @@ function _programsWord(n) {
 }
 
 /* ── Date helpers ───────────────────────────────────────────── */
-function _nextWorkDays(count) {
-  const days = [];
-  const d = new Date();
-  d.setHours(0,0,0,0);
-  d.setDate(d.getDate() + 1);
-  while (days.length < count) {
-    if (d.getDay() !== 0 && d.getDay() !== 6) days.push(new Date(d));
-    d.setDate(d.getDate() + 1);
-  }
-  return days;
-}
-
-function _fmtDate(d) {
-  const DD = ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'];
-  const MM = ['янв','фев','мар','апр','май','июн','июл','авг','сен','окт','ноя','дек'];
-  return DD[d.getDay()] + ', ' + d.getDate() + ' ' + MM[d.getMonth()];
-}
-
-function _fmtDateKk(d) {
-  const DD = ['Жс','Дс','Сс','Ср','Бс','Жм','Сб'];
-  const MM = ['қаң','ақп','нау','сәу','мам','мау','шіл','там','қыр','қаз','қар','жел'];
-  return DD[d.getDay()] + ', ' + d.getDate() + ' ' + MM[d.getMonth()];
-}
-
-function _fmtDateFull(iso) {
-  const d = _astanaDateFromIso(iso);
-  return state.lang === 'kk' ? _fmtDateKk(d) : _fmtDate(d);
-}
-
-function _chipDate(d) { return state.lang === 'kk' ? _fmtDateKk(d) : _fmtDate(d); }
-
-const TIME_SLOTS = ['10:00','10:30','11:00','11:30','12:00','12:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30'];
-const SATURDAY_TIME_SLOTS = ['11:00','11:30','12:00','12:30','14:00','14:30','15:00','15:30','16:00','16:30'];
-const ASTANA_MANGILIK_WEEKDAY_TIME_SLOTS = ['09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30'];
-const ASTANA_MANGILIK_WEEKEND_TIME_SLOTS = ['09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'];
-const APPOINTMENT_TIME_ZONE = 'Asia/Almaty';
-const APPOINTMENT_UTC_OFFSET = '+05:00';
-
-function _astanaDateParts(date) {
-  const parts = new Intl.DateTimeFormat('en-CA', {
-    timeZone: APPOINTMENT_TIME_ZONE,
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  }).formatToParts(date || new Date()).reduce(function(acc, part) {
-    if (part.type !== 'literal') acc[part.type] = part.value;
-    return acc;
-  }, {});
-  return {
-    iso: parts.year + '-' + parts.month + '-' + parts.day,
-    minutes: parseInt(parts.hour, 10) * 60 + parseInt(parts.minute, 10),
-  };
-}
-
-function _astanaTodayIso() {
-  return _astanaDateParts(new Date()).iso;
-}
-
-function _astanaNowMinutes() {
-  return _astanaDateParts(new Date()).minutes;
-}
-
-function _astanaDateFromIso(iso) {
-  return new Date(String(iso || '') + 'T12:00:00' + APPOINTMENT_UTC_OFFSET);
-}
-
-function _addAstanaDaysIso(iso, days) {
-  const d = _astanaDateFromIso(iso);
-  d.setUTCDate(d.getUTCDate() + days);
-  return d.toISOString().slice(0, 10);
-}
-
-function _slotMinutes(timeText) {
-  const parts = String(timeText || '').split(':').map(function(part) { return parseInt(part, 10); });
-  if (parts.length < 2 || parts.some(function(part) { return Number.isNaN(part); })) return null;
-  return parts[0] * 60 + parts[1];
-}
-
-function _dayOfWeekIso(iso) {
-  const d = _astanaDateFromIso(iso);
-  return d.getDay();
-}
-
-function _selectedBranchData() {
-  return (state.branches || []).find(function(b) { return b.id === state.selectedBranch; }) || null;
-}
-
-function _isAstanaMangilikSchedule(branch) {
-  return !!branch && branch.schedule_key === 'astana_mangilik_el';
-}
-
-function _isClosedDateIso(iso, branch) {
-  const day = _dayOfWeekIso(iso);
-  return day === 0 && !_isAstanaMangilikSchedule(branch);
-}
-
-function _timeSlotsForDate(dateIso, branch) {
-  const selectedBranch = branch || _selectedBranchData();
-  if (!dateIso) return _isAstanaMangilikSchedule(selectedBranch) ? ASTANA_MANGILIK_WEEKDAY_TIME_SLOTS : TIME_SLOTS;
-  const day = _dayOfWeekIso(dateIso);
-  if (_isAstanaMangilikSchedule(selectedBranch)) {
-    return day >= 5 ? ASTANA_MANGILIK_WEEKEND_TIME_SLOTS : ASTANA_MANGILIK_WEEKDAY_TIME_SLOTS;
-  }
-  if (day === 0) return [];
-  if (day === 6) return SATURDAY_TIME_SLOTS;
-  return TIME_SLOTS;
-}
-
-function _isWithinAppointmentHours(dateIso, timeText, branch) {
-  if (!dateIso || !timeText) return false;
-  return _timeSlotsForDate(dateIso, branch).indexOf(timeText) !== -1;
-}
-
-function _isPastAppointmentSlot(dateIso, timeText) {
-  if (!dateIso || !timeText) return false;
-  const todayIso = _astanaTodayIso();
-  if (dateIso < todayIso) return true;
-  if (dateIso > todayIso) return false;
-  const minutes = _slotMinutes(timeText);
-  return minutes !== null && minutes <= _astanaNowMinutes();
-}
-
-function _hasAvailableSlots(dateIso, branch) {
-  return _timeSlotsForDate(dateIso, branch).some(function(tm) { return !_isPastAppointmentSlot(dateIso, tm); });
-}
 
 /* ── UI helpers ─────────────────────────────────────────────── */
 function _progress(step) {
@@ -1645,220 +1477,22 @@ function _isoDateLocal(date) {
   return year + '-' + month + '-' + day;
 }
 
-function _buildDateChips() {
-  const chips = [];
-  const selectedBranch = _selectedBranchData();
-  const todayIso = _astanaTodayIso();
-  const today = _astanaDateFromIso(todayIso);
-  const tomorrowIso = _addAstanaDaysIso(todayIso, 1);
 
-  /* Сегодня показываем, пока внутри текущего дня есть будущие слоты. */
-  if (!_isClosedDateIso(todayIso, selectedBranch) && _hasAvailableSlots(todayIso, selectedBranch)) {
-    chips.push({ date: todayIso, label: t('s4.date.today') });
-  }
-
-  /* Next 4 workdays */
-  let iso = _addAstanaDaysIso(todayIso, 1);
-  let added = 0;
-  while (added < 4) {
-    const d = _astanaDateFromIso(iso);
-    if (!_isClosedDateIso(iso, selectedBranch)) {
-      const label = iso === tomorrowIso ? t('s4.date.tomorrow') : _chipDate(d);
-      chips.push({ date: iso, label });
-      added++;
-    }
-    iso = _addAstanaDaysIso(iso, 1);
-  }
-
-  return chips;
-}
-
-function _dateFromIsoLocal(iso) {
-  const parts = String(iso || '').split('-').map(function(part) { return parseInt(part, 10); });
-  if (parts.length !== 3 || parts.some(function(part) { return Number.isNaN(part); })) return null;
-  return _astanaDateFromIso(iso);
-}
-
-function _isSundayIso(iso) {
-  const date = _dateFromIsoLocal(iso);
-  return date ? date.getDay() === 0 : false;
-}
-
-function _showClosedDateError(dateErr) {
-  if (!dateErr) return;
-  dateErr.textContent = state.lang === 'kk'
-    ? 'Жексенбіге жазылу жоқ. Басқа күнді таңдаңыз.'
-    : 'В воскресенье запись недоступна. Выберите другой день.';
-  dateErr.classList.add('visible');
-}
-
-function _clearDateError() {
-  const dateErr = document.getElementById('lc-date-err');
-  if (!dateErr) return;
-  dateErr.textContent = '';
-  dateErr.classList.remove('visible');
-}
-
-function _refreshTimeButtons() {
-  document.querySelectorAll('.lc-time-btn').forEach(function(btn) {
-    const allowedByHours = !state.selectedDate || _isWithinAppointmentHours(state.selectedDate, btn.dataset.time);
-    const disabled = !state.selectedDate || !allowedByHours || _isPastAppointmentSlot(state.selectedDate, btn.dataset.time);
-    btn.hidden = state.selectedDate ? !allowedByHours : false;
-    btn.disabled = disabled;
-    btn.classList.toggle('disabled', disabled);
-    btn.classList.toggle('selected', !disabled && btn.dataset.time === state.selectedTime);
-    if (disabled) {
-      btn.setAttribute('aria-disabled', 'true');
-      if (btn.dataset.time === state.selectedTime) state.selectedTime = null;
-    } else {
-      btn.removeAttribute('aria-disabled');
-    }
-  });
-}
-
-function _bookingRailHtml() {
-  const steps = [
-    { key: 'branch', label: t('s4.rail.branch'), done: !!state.selectedBranch, active: !state.selectedBranch },
-    { key: 'date', label: t('s4.rail.date'), done: !!state.selectedDate, active: !!state.selectedBranch && !state.selectedDate },
-    { key: 'time', label: t('s4.rail.time'), done: !!state.selectedTime, active: !!state.selectedDate && !state.selectedTime },
-  ];
-  return steps.map(function(step, index) {
-    const cls = step.done ? ' done' : step.active ? ' active' : '';
-    return '<div class="lc-booking-step-chip' + cls + '">' +
-      '<span>' + (step.done ? '✓' : (index + 1)) + '</span>' +
-      '<b>' + _esc(step.label) + '</b>' +
-    '</div>';
-  }).join('');
-}
-
-function _updateBookingStage(branches) {
-  const hasB = !!state.selectedBranch;
-  const hasD = !!state.selectedDate;
-  const hasT = !!state.selectedTime;
-
-  const rail = document.getElementById('lc-booking-rail');
-  const bSection = document.getElementById('lc-booking-branch');
-  const dSection = document.getElementById('lc-booking-date');
-  const tSection = document.getElementById('lc-booking-time');
-  const sumWrap  = document.getElementById('lc-summary-wrap');
-  const cta      = document.getElementById('lc-s4-submit');
-
-  if (!bSection) return;
-
-  if (rail) rail.innerHTML = _bookingRailHtml();
-
-  bSection.className = 'lc-booking-section' + (hasB ? ' done' : ' active');
-  dSection.className = 'lc-booking-section' + (!hasB ? ' locked' : hasD ? ' done' : ' active');
-  tSection.className = 'lc-booking-section' + (!hasD ? ' locked' : hasT ? ' done' : ' active');
-
-  if (cta) cta.disabled = !(hasB && hasD && hasT);
-
-  if (sumWrap) {
-    if (hasB && hasD && hasT) {
-      const selBranch = (branches || state.branches).find(function(b) { return b.id === state.selectedBranch; });
-      sumWrap.hidden = false;
-      sumWrap.innerHTML =
-        '<div class="lc-booking-summary">' +
-          '<h3 class="lc-summary-title">' + _esc(t('s4.summary.title')) + '</h3>' +
-          '<div class="lc-booking-row">' +
-            '<span class="lc-booking-key">' + _esc(t('s4.summary.branch')) + '</span>' +
-            '<span class="lc-booking-val">' + _esc(selBranch ? selBranch.name : '') + '</span>' +
-          '</div>' +
-          '<div class="lc-booking-row">' +
-            '<span class="lc-booking-key">' + _esc(t('s4.summary.date')) + '</span>' +
-            '<span class="lc-booking-val">' + _esc(_fmtDateFull(state.selectedDate)) + '</span>' +
-          '</div>' +
-          '<div class="lc-booking-row">' +
-            '<span class="lc-booking-key">' + _esc(t('s4.summary.time')) + '</span>' +
-            '<span class="lc-booking-val">' + _esc(state.selectedTime) + '</span>' +
-          '</div>' +
-          (selBranch && selBranch.address ? '<div class="lc-booking-row">' +
-            '<span class="lc-booking-key">' + _esc(t('s4.summary.addr')) + '</span>' +
-            '<span class="lc-booking-val">' + _esc(selBranch.address) + '</span>' +
-          '</div>' : '') +
-          '<div class="lc-booking-row">' +
-            '<span class="lc-booking-key">' + _esc(t('s4.summary.name')) + '</span>' +
-            '<span class="lc-booking-val">' + _esc(state.name) + '</span>' +
-          '</div>' +
-          '<div class="lc-booking-row">' +
-            '<span class="lc-booking-key">' + _esc(t('s4.summary.phone')) + '</span>' +
-            '<span class="lc-booking-val">' + _esc(_formatPhone(state.phone)) + '</span>' +
-          '</div>' +
-        '</div>';
-    } else {
-      sumWrap.hidden = true;
-      sumWrap.innerHTML = '';
-    }
-  }
-
-  /* Scroll to next active section */
-  if (!hasB) {
-    /* already at top */
-  } else if (!hasD) {
-    setTimeout(function() {
-      dSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 120);
-  } else if (!hasT) {
-    setTimeout(function() {
-      tSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 120);
-  }
-}
-
+/* ─────────────────────────────────────────────────────────────
+   STEP 4 — Callback time preference
+───────────────────────────────────────────────────────────── */
 function renderStep4() {
   state.step = 4;
-  const selectedBranchForSchedule = _selectedBranchData();
-  if (state.selectedDate && _isClosedDateIso(state.selectedDate, selectedBranchForSchedule)) {
-    state.selectedDate = null;
-    state.selectedTime = null;
-    _save();
-  }
-  if (_isPastAppointmentSlot(state.selectedDate, state.selectedTime)) {
-    state.selectedTime = null;
-    _save();
-  }
-  if (state.selectedDate && state.selectedTime && !_isWithinAppointmentHours(state.selectedDate, state.selectedTime, selectedBranchForSchedule)) {
-    state.selectedTime = null;
-    _save();
-  }
-  const city = (state.targetCity || '').toLowerCase();
-  const filtered = city
-    ? state.branches.filter(function(b) { return b.city && b.city.toLowerCase().includes(city); })
-    : state.branches;
-  const noLocal  = city && filtered.length === 0 && state.branches.length > 0;
-  const branches = filtered.length > 0 ? filtered : state.branches;
 
-  const noticeBanner = noLocal
-    ? '<div class="lc-booking-notice">' + _esc(t('s4.nolocal')) + '</div>'
-    : '';
-  const branchCards = branches.length
-    ? noticeBanner + branches.map(function(b) {
-        const sel = state.selectedBranch === b.id;
-        return '<div class="lc-branch-card' + (sel ? ' selected' : '') + '" data-id="' + b.id + '" role="button" tabindex="0">' +
-          (sel ? '<span class="lc-branch-check">✓</span>' : '') +
-          '<div class="lc-branch-name">' + _esc(b.name || '') + '</div>' +
-          '<div class="lc-branch-addr">' + _esc(b.address || '') + '</div>' +
-          (b.working_hours ? '<div class="lc-branch-meta"><span class="lc-branch-slot">' + _esc(b.working_hours) + '</span></div>' : '') +
-          (b.map_url ? '<a class="lc-branch-map" href="' + _esc(b.map_url) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Карта</a>' : '') +
-          '<div class="lc-branch-action">' + _esc(sel ? t('s4.branch.selected') : t('s4.branch.choose')) + '</div>' +
-        '</div>';
-      }).join('')
-    : '<div class="lc-booking-empty">' + _esc(t('s4.nobranch')) + '</div>';
-
-  const dateChips = _buildDateChips().map(function(chip) {
-    const sel = state.selectedDate === chip.date;
-    return '<button type="button" class="lc-date-chip' + (sel ? ' selected' : '') + '" data-date="' + chip.date + '">' + _esc(chip.label) + '</button>';
-  }).join('') +
-  '<button type="button" class="lc-date-chip lc-date-other" id="lc-date-other-btn">' + _esc(t('s4.date.other')) + '</button>' +
-  '<input type="date" id="lc-date-picker" class="lc-date-picker" style="display:none" min="' + _astanaTodayIso() + '">';
-
-  const visibleTimeSlots = state.selectedDate ? _timeSlotsForDate(state.selectedDate, selectedBranchForSchedule) : _timeSlotsForDate(null, selectedBranchForSchedule);
-  const timeGrid = visibleTimeSlots.map(function(tm) {
-    const sel = state.selectedTime === tm;
-    const allowedByHours = !state.selectedDate || _isWithinAppointmentHours(state.selectedDate, tm, selectedBranchForSchedule);
-    const disabled = !state.selectedDate || !allowedByHours || _isPastAppointmentSlot(state.selectedDate, tm);
-    return '<button type="button" class="lc-time-btn' + (sel ? ' selected' : '') + (disabled ? ' disabled' : '') + '" data-time="' + tm + '"' + (disabled ? ' disabled aria-disabled="true"' : '') + (state.selectedDate && !allowedByHours ? ' hidden' : '') + '>' + tm + '</button>';
+  const calltimes = ['morning', 'afternoon', 'evening', 'any'];
+  const calltimeButtons = calltimes.map(function(key) {
+    const sel = state.selectedCalltime === key;
+    return '<button type="button" class="lc-sub-option' + (sel ? ' selected' : '') + '" data-val="' + key + '">' +
+      _esc(t('s4.calltime.' + key)) +
+    '</button>';
   }).join('');
+
+  const productLabel = _esc(t('s4.product.' + (state.product || 'mortgage')));
 
   _setContent(
     '<div class="lc-step-head">' +
@@ -1867,53 +1501,36 @@ function renderStep4() {
       '<p class="lc-step-subtitle">' + _esc(t('s4.subtitle')) + '</p>' +
     '</div>' +
 
-    '<div class="lc-booking-primer">' +
-      '<div><b>' + _esc(t('s4.primer.title')) + '</b><span>' + _esc(t('s4.primer.text')) + '</span></div>' +
-      '<div class="lc-booking-rail" id="lc-booking-rail">' + _bookingRailHtml() + '</div>' +
+    '<div class="lc-body">' +
+      '<div class="lc-quiz-section">' +
+        '<div class="lc-quiz-q-label">' + _esc(t('s4.calltime.label')) + '</div>' +
+        '<div class="lc-sub-options lc-sub-options-2" id="lc-calltime-group">' + calltimeButtons + '</div>' +
+        '<span class="lc-err" id="lc-calltime-err"></span>' +
+      '</div>' +
     '</div>' +
 
-    '<div class="lc-booking-flow">' +
-      /* Branch */
-      '<div class="lc-booking-section" id="lc-booking-branch">' +
-        '<div class="lc-booking-section-head">' +
-          '<div class="lc-booking-num">1</div>' +
-          '<div class="lc-booking-section-title">' + _esc(t('s4.branch.label')) + '</div>' +
-          '<div class="lc-booking-arrow">↓</div>' +
-        '</div>' +
-        '<div class="lc-booking-hint" id="lc-branch-hint">' + _esc(t('s4.branch.hint')) + '</div>' +
-        '<div class="lc-branches" id="lc-branches">' + branchCards + '</div>' +
-        '<span class="lc-err" id="lc-branch-err"></span>' +
+    '<div class="lc-booking-summary" id="lc-s4-summary">' +
+      '<h3 class="lc-summary-title">' + _esc(t('s4.summary.title')) + '</h3>' +
+      '<div class="lc-booking-row">' +
+        '<span class="lc-booking-key">' + _esc(t('s4.summary.name')) + '</span>' +
+        '<span class="lc-booking-val">' + _esc(state.name) + '</span>' +
       '</div>' +
-
-      /* Date */
-      '<div class="lc-booking-section" id="lc-booking-date">' +
-        '<div class="lc-booking-section-head">' +
-          '<div class="lc-booking-num">2</div>' +
-          '<div class="lc-booking-section-title">' + _esc(t('s4.date.label')) + '</div>' +
-          '<div class="lc-booking-arrow">↓</div>' +
-        '</div>' +
-        '<div class="lc-booking-hint">' + _esc(t('s4.date.hint')) + '</div>' +
-        '<div class="lc-date-chips" id="lc-dates">' + dateChips + '</div>' +
-        '<span class="lc-err" id="lc-date-err"></span>' +
+      '<div class="lc-booking-row">' +
+        '<span class="lc-booking-key">' + _esc(t('s4.summary.phone')) + '</span>' +
+        '<span class="lc-booking-val">' + _esc(_formatPhone(state.phone)) + '</span>' +
       '</div>' +
-
-      /* Time */
-      '<div class="lc-booking-section" id="lc-booking-time">' +
-        '<div class="lc-booking-section-head">' +
-          '<div class="lc-booking-num">3</div>' +
-          '<div class="lc-booking-section-title">' + _esc(t('s4.time.label')) + '</div>' +
-        '</div>' +
-        '<div class="lc-booking-hint">' + _esc(t('s4.time.hint')) + '</div>' +
-        '<div class="lc-time-grid" id="lc-times">' + timeGrid + '</div>' +
-        '<span class="lc-err" id="lc-time-err"></span>' +
+      '<div class="lc-booking-row">' +
+        '<span class="lc-booking-key">' + _esc(t('s4.summary.city')) + '</span>' +
+        '<span class="lc-booking-val">' + _esc(state.targetCity || state.city) + '</span>' +
       '</div>' +
-
-      /* Summary */
-      '<div id="lc-summary-wrap" hidden></div>' +
+      '<div class="lc-booking-row">' +
+        '<span class="lc-booking-key">' + _esc(t('s4.summary.product')) + '</span>' +
+        '<span class="lc-booking-val">' + productLabel + '</span>' +
+      '</div>' +
     '</div>' +
 
     '<div class="lc-cta-wrap">' +
-      '<button class="lc-btn lc-btn-primary" id="lc-s4-submit" disabled>' + _esc(t('s4.cta')) + '</button>' +
+      '<button class="lc-btn lc-btn-primary" id="lc-s4-submit">' + _esc(t('s4.cta')) + '</button>' +
     '</div>'
   );
 
@@ -1921,154 +1538,40 @@ function renderStep4() {
   _scoreBar(4, true, state.score);
   _trustBlock(false);
 
-  /* Set initial booking stage */
-  _updateBookingStage(branches);
-  _refreshTimeButtons();
-
-  /* Branch click */
-  document.getElementById('lc-branches').addEventListener('click', function(e) {
-    const card = e.target.closest('.lc-branch-card[data-id]');
-    if (!card) return;
-    const newId = parseInt(card.dataset.id);
-    if (state.selectedBranch !== newId) {
-      state.selectedDate = null;
-      state.selectedTime = null;
-      /* Reset date/time UI */
-      document.querySelectorAll('.lc-date-chip').forEach(function(c) { c.classList.remove('selected'); });
-      document.querySelectorAll('.lc-time-btn').forEach(function(b) { b.classList.remove('selected'); });
-      _refreshTimeButtons();
-    }
-    state.selectedBranch = newId;
-    document.querySelectorAll('.lc-branch-card').forEach(function(c) {
-      const isSel = parseInt(c.dataset.id) === state.selectedBranch;
-      c.classList.toggle('selected', isSel);
-      const chk = c.querySelector('.lc-branch-check');
-      if (isSel && !chk) {
-        c.insertAdjacentHTML('afterbegin', '<span class="lc-branch-check">✓</span>');
-      } else if (!isSel && chk) {
-        chk.remove();
-      }
-    });
-    document.getElementById('lc-branch-err').classList.remove('visible');
-    _track('branch_selected', { branch_id: state.selectedBranch });
-    _save();
-    renderStep4();
-  });
-
-  /* Date click */
-  document.getElementById('lc-dates').addEventListener('click', function(e) {
-    const chip = e.target.closest('.lc-date-chip:not(.lc-date-other)');
-    if (chip) {
-      state.selectedDate = chip.dataset.date;
-      state.selectedTime = null;
-      document.querySelectorAll('.lc-date-chip').forEach(function(c) {
-        c.classList.toggle('selected', c.dataset.date === state.selectedDate);
-      });
-      document.querySelectorAll('.lc-time-btn').forEach(function(b) { b.classList.remove('selected'); });
-      _refreshTimeButtons();
-      _clearDateError();
-      _track('date_selected', { date: state.selectedDate });
-      _save();
-      _updateBookingStage(branches);
-    }
-    if (e.target.closest('.lc-date-other')) {
-      const picker = document.getElementById('lc-date-picker');
-      picker.style.display = 'block';
-      picker.focus();
-      picker.click();
-    }
-  });
-
-  const picker = document.getElementById('lc-date-picker');
-  if (picker) {
-    picker.addEventListener('change', function() {
-      if (!picker.value) return;
-      if (_isClosedDateIso(picker.value, _selectedBranchData())) {
-        state.selectedDate = null;
-        state.selectedTime = null;
-        picker.value = '';
-        document.querySelectorAll('.lc-date-chip').forEach(function(c) { c.classList.remove('selected'); });
-        document.querySelectorAll('.lc-time-btn').forEach(function(b) { b.classList.remove('selected'); });
-        _refreshTimeButtons();
-        _showClosedDateError(document.getElementById('lc-date-err'));
-        _save();
-        _updateBookingStage(branches);
-        return;
-      }
-      state.selectedDate = picker.value;
-      state.selectedTime = null;
-      document.querySelectorAll('.lc-date-chip').forEach(function(c) { c.classList.remove('selected'); });
-      document.querySelectorAll('.lc-time-btn').forEach(function(b) { b.classList.remove('selected'); });
-      _refreshTimeButtons();
-      /* Add chip for picked date or mark other */
-      const otherBtn = document.getElementById('lc-date-other-btn');
-      if (otherBtn) otherBtn.classList.add('selected');
-      _clearDateError();
-      _track('date_selected', { date: state.selectedDate });
-      _save();
-      _updateBookingStage(branches);
-    });
-  }
-
-  /* Time click */
-  document.getElementById('lc-times').addEventListener('click', function(e) {
-    const btn = e.target.closest('.lc-time-btn');
+  document.getElementById('lc-calltime-group').addEventListener('click', function(e) {
+    const btn = e.target.closest('.lc-sub-option');
     if (!btn) return;
-    if (btn.disabled || btn.classList.contains('disabled')) return;
-    state.selectedTime = btn.dataset.time;
-    document.querySelectorAll('.lc-time-btn').forEach(function(b) {
-      b.classList.toggle('selected', b.dataset.time === state.selectedTime);
+    state.selectedCalltime = btn.dataset.val;
+    document.querySelectorAll('#lc-calltime-group .lc-sub-option').forEach(function(b) {
+      b.classList.toggle('selected', b.dataset.val === state.selectedCalltime);
     });
-    document.getElementById('lc-time-err').classList.remove('visible');
-    _track('time_selected', { time: state.selectedTime });
+    document.getElementById('lc-calltime-err').classList.remove('visible');
     _save();
-    _updateBookingStage(branches);
   });
 
   document.getElementById('lc-s4-submit').addEventListener('click', submitStep4);
-  _track('booking_step_opened');
+  _track('callback_step_opened');
 }
 
 async function submitStep4() {
-  const branchErr = document.getElementById('lc-branch-err');
-  const dateErr   = document.getElementById('lc-date-err');
-  const timeErr   = document.getElementById('lc-time-err');
-  let ok = true;
-
-  if (!state.selectedBranch) { branchErr.textContent = t('s4.err.branch'); branchErr.classList.add('visible'); ok = false; }
-  if (!state.selectedDate)   { dateErr.textContent   = t('s4.err.date');   dateErr.classList.add('visible');   ok = false; }
-  if (state.selectedDate && _isClosedDateIso(state.selectedDate, _selectedBranchData())) { _showClosedDateError(dateErr); ok = false; }
-  if (!state.selectedTime)   { timeErr.textContent   = t('s4.err.time');   timeErr.classList.add('visible');   ok = false; }
-  if (state.selectedDate && state.selectedTime && !_isWithinAppointmentHours(state.selectedDate, state.selectedTime, _selectedBranchData())) {
-    state.selectedTime = null;
-    _refreshTimeButtons();
-    timeErr.textContent = 'В выбранный день это время недоступно. Выберите другой слот.';
-    timeErr.classList.add('visible');
-    ok = false;
+  const calltimeErr = document.getElementById('lc-calltime-err');
+  if (!state.selectedCalltime) {
+    calltimeErr.textContent = t('s4.err.calltime');
+    calltimeErr.classList.add('visible');
+    return;
   }
-  if (state.selectedDate && state.selectedTime && _isPastAppointmentSlot(state.selectedDate, state.selectedTime)) {
-    state.selectedTime = null;
-    _refreshTimeButtons();
-    timeErr.textContent = 'Это время уже прошло. Выберите другое время.';
-    timeErr.classList.add('visible');
-    ok = false;
-  }
-  if (!ok) return;
 
   const btn = document.getElementById('lc-s4-submit');
   btn.disabled = true;
   btn.innerHTML = '<div class="lc-spinner"></div>';
 
-  const apptDt = new Date(state.selectedDate + 'T' + state.selectedTime + ':00' + APPOINTMENT_UTC_OFFSET);
-
   try {
-    await _api('POST', '/public/lead-capture/leads/' + state.clientToken + '/appointment', {
-      branch_id: state.selectedBranch,
-      appointment_datetime: apptDt.toISOString(),
+    await _api('POST', '/public/lead-capture/leads/' + state.clientToken + '/callback-request', {
+      preferred_call_time: state.selectedCalltime,
       form_language: state.lang,
       service_type: state.product,
     });
-    _track('appointment_booked', { step: 4, branch_id: state.selectedBranch });
+    _track('callback_request_submitted', { call_time: state.selectedCalltime });
     _clearStorage();
     renderSuccess();
   } catch (err) {
@@ -2090,8 +1593,7 @@ function _waShareBtn() {
 }
 
 function renderSuccess() {
-  const branch = state.branches.find(function(b) { return b.id === state.selectedBranch; });
-  const dt = (state.selectedDate ? _fmtDateFull(state.selectedDate) : '') + ' ' + (state.selectedTime || '');
+  const calltimeKey = state.selectedCalltime || 'any';
 
   _setContent(
     '<div class="lc-success">' +
@@ -2112,21 +1614,21 @@ function renderSuccess() {
       '<p>' + _esc(t('success.sub')) + '</p>' +
       '<div class="lc-success-detail">' +
         '<div class="lc-success-row">' +
-          '<span class="lc-success-k">' + _esc(t('success.branch')) + '</span>' +
-          '<span class="lc-success-v">' + _esc(branch ? branch.name : '') + '</span>' +
-        '</div>' +
-        '<div class="lc-success-row">' +
-          '<span class="lc-success-k">' + _esc(t('success.datetime')) + '</span>' +
-          '<span class="lc-success-v">' + _esc(dt) + '</span>' +
-        '</div>' +
-        '<div class="lc-success-row">' +
           '<span class="lc-success-k">' + _esc(t('success.name')) + '</span>' +
           '<span class="lc-success-v">' + _esc(state.name) + '</span>' +
+        '</div>' +
+        '<div class="lc-success-row">' +
+          '<span class="lc-success-k">' + _esc(t('success.phone')) + '</span>' +
+          '<span class="lc-success-v">' + _esc(_formatPhone(state.phone)) + '</span>' +
+        '</div>' +
+        '<div class="lc-success-row">' +
+          '<span class="lc-success-k">' + _esc(t('success.calltime')) + '</span>' +
+          '<span class="lc-success-v">' + _esc(t('s4.calltime.' + calltimeKey)) + '</span>' +
         '</div>' +
       '</div>' +
       '<p class="lc-success-note">' + _esc(t('success.note')) + '</p>' +
       '<div class="lc-success-actions">' +
-        (state.instagramUrl ? '<a href="' + _esc(state.instagramUrl) + '" class="lc-btn lc-btn-outline" target="_blank" rel="noopener" onclick="_track(\'instagram_reviews_clicked\')">' +
+        (state.instagramUrl ? '<a href="' + _esc(state.instagramUrl) + '" class="lc-btn lc-btn-outline" target="_blank" rel="noopener" onclick="_track(\'instagram_link_clicked\')">' +
           '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>' +
           _esc(t('success.ig')) + '</a>' : '') +
         _waShareBtn() +
@@ -2134,9 +1636,9 @@ function renderSuccess() {
     '</div>'
   );
 
-  document.getElementById('lc-topbar').hidden  = true;
+  document.getElementById('lc-topbar').hidden   = true;
   document.getElementById('lc-score-bar').hidden = true;
-  document.getElementById('lc-trust').hidden    = true;
+  document.getElementById('lc-trust').hidden     = true;
 }
 
 /* ── Lang switch ────────────────────────────────────────────── */
@@ -2186,12 +1688,6 @@ function _initAB() {
 async function boot() {
   _initAB();
   _restore();
-  if (IS_APPOINTMENT_ONLY) {
-    state.appointmentOnly = true;
-    state.clientToken = INITIAL_CLIENT_TOKEN;
-    state.step = 4;
-    state.score = Math.max(state.score || 20, 75);
-  }
 
   document.documentElement.lang = state.lang;
   document.querySelectorAll('.lc-lang-btn').forEach(function(b) {
@@ -2203,7 +1699,6 @@ async function boot() {
 
   try {
     const cfg = await _api('GET', '/public/lead-capture/' + SLUG);
-    state.branches    = cfg.branches    || [];
     state.banks       = cfg.banks       || [];
     if (Array.isArray(cfg.city_options) && cfg.city_options.length) {
       KZ_CITIES = cfg.city_options;
@@ -2219,11 +1714,6 @@ async function boot() {
         .catch(function() {});
     }
   } catch (_) {}
-
-  if (state.appointmentOnly && state.clientToken) {
-    renderStep4();
-    return;
-  }
 
   const s = state.step;
   if (state.clientToken && s >= 1.5) {
