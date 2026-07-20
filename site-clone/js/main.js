@@ -67,34 +67,7 @@ const I18N = {
     's35.cat.low.desc':    'Разберёмся вместе. Наш эксперт найдёт решение.',
     's35.programs': 'Предварительно найдено {n} подходящих программ',
     's35.legal':    'Подбор является предварительным. Точные условия и решение определяются после консультации и проверки документов.',
-    's35.cta':      'Продолжить к записи →',
-    's4.kicker':       'Последний шаг',
-    's4.title':        'Когда вам удобно позвонить?',
-    's4.subtitle':     'Наш специалист свяжется с вами в удобное время и проконсультирует бесплатно.',
-    's4.calltime.label': 'Удобное время для звонка',
-    's4.calltime.morning':   'Утром (9:00–12:00)',
-    's4.calltime.afternoon': 'Днём (12:00–17:00)',
-    's4.calltime.evening':   'Вечером (17:00–20:00)',
-    's4.calltime.any':       'В любое время',
-    's4.summary.title': 'Ваша заявка',
-    's4.summary.name':  'Имя',
-    's4.summary.phone': 'Телефон',
-    's4.summary.city':  'Город',
-    's4.summary.product': 'Продукт',
-    's4.summary.calltime': 'Время звонка',
-    's4.product.mortgage': 'Ипотека',
-    's4.product.credit':   'Кредит',
-    's4.cta':          'Отправить заявку →',
-    's4.err.calltime': 'Выберите удобное время',
-    'success.title':   'Заявка принята!',
-    'success.sub':     'Специалист свяжется с вами в ближайшее рабочее время',
-    'success.name':    'Имя',
-    'success.phone':   'Телефон',
-    'success.calltime':'Время звонка',
-    'success.note':    'Если вопросы срочные — напишите нам в Instagram.',
-    'success.ig':      'Написать в Instagram',
-    'success.wa':      'Проверка кредитной истории близких',
-    'success.wa.msg':  'Проверь вероятность одобрения ипотеки онлайн, бесплатно за 2 минуты 👉 ',
+    's35.specialist.note': 'Наш специалист свяжется с вами в рабочее время и подберёт лучшие условия.',
     'toast.q1': '+балл за историю кредитов',
     'toast.q2': '+балл за первоначальный взнос',
     'toast.q3': '+балл за подтверждение дохода',
@@ -113,8 +86,9 @@ const I18N = {
     'assist.auto.seconds': 'сек',
     'assist.product.title': 'Продолжим по ипотеке, если клиент не выбрал сам',
     'assist.product.caption': 'Ипотека выбрана по умолчанию, чтобы заявка не останавливалась.',
-    'assist.banks.title': 'Следующий шаг — оставить заявку',
-    'assist.banks.caption': 'Подбор предварительный. Специалист свяжется с вами и подберёт лучшие условия.',
+    'success.ig':  'Написать в Instagram',
+    'success.wa':  'Поделиться с близкими',
+    'success.wa.msg': 'Проверь вероятность одобрения ипотеки онлайн, бесплатно за 2 минуты 👉 ',
   },
   kk: {
     'score.label':  'Алдын ала дайындық',
@@ -180,34 +154,10 @@ const I18N = {
     's35.cat.low.desc':    'Бірге шешеміз. Сарапшымыз шешім табады.',
     's35.programs': 'Алдын ала {n} сәйкес бағдарлама табылды',
     's35.legal':    'Іріктеу алдын ала болып табылады. Нақты шарттар мен шешім кеңестен кейін анықталады.',
-    's35.cta':      'Жазылуға өту →',
-    's4.kicker':       'Соңғы қадам',
-    's4.title':        'Қоңырау шалу үшін ыңғайлы уақыт қандай?',
-    's4.subtitle':     'Сарапшымыз ыңғайлы уақытта хабарласып, тегін кеңес береді.',
-    's4.calltime.label': 'Қоңырауға ыңғайлы уақыт',
-    's4.calltime.morning':   'Таңертең (9:00–12:00)',
-    's4.calltime.afternoon': 'Күндізі (12:00–17:00)',
-    's4.calltime.evening':   'Кешке (17:00–20:00)',
-    's4.calltime.any':       'Кез келген уақытта',
-    's4.summary.title': 'Сіздің өтінімі',
-    's4.summary.name':  'Аты',
-    's4.summary.phone': 'Телефон',
-    's4.summary.city':  'Қала',
-    's4.summary.product': 'Өнім',
-    's4.summary.calltime': 'Қоңырау уақыты',
-    's4.product.mortgage': 'Ипотека',
-    's4.product.credit':   'Несие',
-    's4.cta':          'Өтінімді жіберу →',
-    's4.err.calltime': 'Ыңғайлы уақытты таңдаңыз',
-    'success.title':   'Өтінім қабылданды!',
-    'success.sub':     'Сарапшы жұмыс уақытында хабарласады',
-    'success.name':    'Аты',
-    'success.phone':   'Телефон',
-    'success.calltime':'Қоңырау уақыты',
-    'success.note':    'Сұрақтар шұғыл болса — Instagram-да жазыңыз.',
-    'success.ig':      'Instagram-да жазу',
-    'success.wa':      'Жақындарыңыздың несие тарихын тексеру',
-    'success.wa.msg':  'Ипотеканы мақұлдау ықтималдығын онлайн тексер, 2 минутта тегін 👉 ',
+    's35.specialist.note': 'Сарапшымыз жұмыс уақытында хабарласып, ең жақсы шарттарды ұсынады.',
+    'success.ig':  'Instagram-да жазу',
+    'success.wa':  'Жақындарыңызбен бөлісу',
+    'success.wa.msg': 'Ипотеканы мақұлдау ықтималдығын онлайн тексер, 2 минутта тегін 👉 ',
     'toast.q1': '+ұпай несие тарихы үшін',
     'toast.q2': '+ұпай бастапқы жарна үшін',
     'toast.q3': '+ұпай кіріс расталуы үшін',
@@ -226,8 +176,6 @@ const I18N = {
     'assist.auto.seconds': 'сек',
     'assist.product.title': 'Клиент өзі таңдамаса, ипотекамен жалғастырамыз',
     'assist.product.caption': 'Өтінім тоқтап қалмауы үшін ипотека әдепкі таңдау.',
-    'assist.banks.title': 'Келесі қадам — өтінім қалдыру',
-    'assist.banks.caption': 'Іріктеу алдын ала. Сарапшы хабарласып, ең жақсы шарттарды ұсынады.',
   },
 };
 
@@ -1430,6 +1378,12 @@ function renderAnalysisResult() {
     '</div>';
   }).join('');
 
+  const shareUrl = window.location.origin + '/stream/' + SLUG;
+  const waMsg = encodeURIComponent(t('success.wa.msg') + shareUrl);
+  const waBtn = '<a href="https://wa.me/?text=' + waMsg + '" class="lc-btn lc-btn-wa" target="_blank" rel="noopener" onclick="_track(\'whatsapp_share_clicked\')">' +
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
+    _esc(t('success.wa')) + '</a>';
+
   _setContent(
     '<div class="lc-result-screen">' +
       '<div class="lc-result-pct-wrap ' + catClass + '">' +
@@ -1440,10 +1394,16 @@ function renderAnalysisResult() {
       '<div class="lc-programs-found">' + _esc(prgText) + '</div>' +
       '<div class="lc-banks-grid lc-banks-' + cat + '">' + bankCards + '</div>' +
       '<p class="lc-result-legal">' + _esc(t('s35.legal')) + '</p>' +
-      '<div class="lc-cta-wrap">' +
-        '<button class="lc-btn lc-btn-primary" id="lc-s35-cta">' + _esc(_isCredit() ? t('s35.cta.credit') : t('s35.cta')) + '</button>' +
+      '<div class="lc-specialist-note">' +
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>' +
+        '<span>' + _esc(t('s35.specialist.note')) + '</span>' +
       '</div>' +
-      _autoAssistHtml('banks', 10) +
+      '<div class="lc-success-actions">' +
+        (state.instagramUrl ? '<a href="' + _esc(state.instagramUrl) + '" class="lc-btn lc-btn-outline" target="_blank" rel="noopener">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>' +
+          _esc(t('success.ig')) + '</a>' : '') +
+        waBtn +
+      '</div>' +
     '</div>'
   );
 
@@ -1454,17 +1414,14 @@ function renderAnalysisResult() {
   _trustBlock(false);
 
   _track('analysis_result_viewed', { score: score, category: cat });
+  _clearStorage();
 
-  document.getElementById('lc-s35-cta').addEventListener('click', function() {
-    _track('banks_continue_clicked');
-    renderStep4();
-  });
-  _startAutoAssist('banks', 10, function() {
-    if (state.step === 3.5) {
-      _track('banks_auto_continue');
-      renderStep4();
-    }
-  });
+  if (state.clientToken) {
+    _api('POST', '/public/lead-capture/leads/' + state.clientToken + '/callback-request', {
+      form_language: state.lang,
+      service_type: state.product,
+    }).catch(function() {});
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1477,169 +1434,6 @@ function _isoDateLocal(date) {
   return year + '-' + month + '-' + day;
 }
 
-
-/* ─────────────────────────────────────────────────────────────
-   STEP 4 — Callback time preference
-───────────────────────────────────────────────────────────── */
-function renderStep4() {
-  state.step = 4;
-
-  const calltimes = ['morning', 'afternoon', 'evening', 'any'];
-  const calltimeButtons = calltimes.map(function(key) {
-    const sel = state.selectedCalltime === key;
-    return '<button type="button" class="lc-sub-option' + (sel ? ' selected' : '') + '" data-val="' + key + '">' +
-      _esc(t('s4.calltime.' + key)) +
-    '</button>';
-  }).join('');
-
-  const productLabel = _esc(t('s4.product.' + (state.product || 'mortgage')));
-
-  _setContent(
-    '<div class="lc-step-head">' +
-      '<div class="lc-kicker">' + _esc(t('s4.kicker')) + '</div>' +
-      '<h2>' + _esc(t('s4.title')) + '</h2>' +
-      '<p class="lc-step-subtitle">' + _esc(t('s4.subtitle')) + '</p>' +
-    '</div>' +
-
-    '<div class="lc-body">' +
-      '<div class="lc-quiz-section">' +
-        '<div class="lc-quiz-q-label">' + _esc(t('s4.calltime.label')) + '</div>' +
-        '<div class="lc-sub-options lc-sub-options-2" id="lc-calltime-group">' + calltimeButtons + '</div>' +
-        '<span class="lc-err" id="lc-calltime-err"></span>' +
-      '</div>' +
-    '</div>' +
-
-    '<div class="lc-booking-summary" id="lc-s4-summary">' +
-      '<h3 class="lc-summary-title">' + _esc(t('s4.summary.title')) + '</h3>' +
-      '<div class="lc-booking-row">' +
-        '<span class="lc-booking-key">' + _esc(t('s4.summary.name')) + '</span>' +
-        '<span class="lc-booking-val">' + _esc(state.name) + '</span>' +
-      '</div>' +
-      '<div class="lc-booking-row">' +
-        '<span class="lc-booking-key">' + _esc(t('s4.summary.phone')) + '</span>' +
-        '<span class="lc-booking-val">' + _esc(_formatPhone(state.phone)) + '</span>' +
-      '</div>' +
-      '<div class="lc-booking-row">' +
-        '<span class="lc-booking-key">' + _esc(t('s4.summary.city')) + '</span>' +
-        '<span class="lc-booking-val">' + _esc(state.targetCity || state.city) + '</span>' +
-      '</div>' +
-      '<div class="lc-booking-row">' +
-        '<span class="lc-booking-key">' + _esc(t('s4.summary.product')) + '</span>' +
-        '<span class="lc-booking-val">' + productLabel + '</span>' +
-      '</div>' +
-    '</div>' +
-
-    '<div class="lc-cta-wrap">' +
-      '<button class="lc-btn lc-btn-primary" id="lc-s4-submit">' + _esc(t('s4.cta')) + '</button>' +
-    '</div>'
-  );
-
-  _progress(4);
-  _scoreBar(4, true, state.score);
-  _trustBlock(false);
-
-  document.getElementById('lc-calltime-group').addEventListener('click', function(e) {
-    const btn = e.target.closest('.lc-sub-option');
-    if (!btn) return;
-    state.selectedCalltime = btn.dataset.val;
-    document.querySelectorAll('#lc-calltime-group .lc-sub-option').forEach(function(b) {
-      b.classList.toggle('selected', b.dataset.val === state.selectedCalltime);
-    });
-    document.getElementById('lc-calltime-err').classList.remove('visible');
-    _save();
-  });
-
-  document.getElementById('lc-s4-submit').addEventListener('click', submitStep4);
-  _track('callback_step_opened');
-}
-
-async function submitStep4() {
-  const calltimeErr = document.getElementById('lc-calltime-err');
-  if (!state.selectedCalltime) {
-    calltimeErr.textContent = t('s4.err.calltime');
-    calltimeErr.classList.add('visible');
-    return;
-  }
-
-  const btn = document.getElementById('lc-s4-submit');
-  btn.disabled = true;
-  btn.innerHTML = '<div class="lc-spinner"></div>';
-
-  try {
-    await _api('POST', '/public/lead-capture/leads/' + state.clientToken + '/callback-request', {
-      preferred_call_time: state.selectedCalltime,
-      form_language: state.lang,
-      service_type: state.product,
-    });
-    _track('callback_request_submitted', { call_time: state.selectedCalltime });
-    _clearStorage();
-    renderSuccess();
-  } catch (err) {
-    btn.disabled = false;
-    btn.textContent = t('s4.cta');
-    _showAlert(btn.parentNode, btn, err.message || 'Ошибка. Попробуйте снова.');
-  }
-}
-
-/* ─────────────────────────────────────────────────────────────
-   Success
-───────────────────────────────────────────────────────────── */
-function _waShareBtn() {
-  var shareUrl = window.location.origin + '/stream/' + SLUG;
-  var msg = encodeURIComponent(t('success.wa.msg') + shareUrl);
-  return '<a href="https://wa.me/?text=' + msg + '" class="lc-btn lc-btn-wa" target="_blank" rel="noopener" onclick="_track(\'whatsapp_share_clicked\')">' +
-    '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
-    _esc(t('success.wa')) + '</a>';
-}
-
-function renderSuccess() {
-  const calltimeKey = state.selectedCalltime || 'any';
-
-  _setContent(
-    '<div class="lc-success">' +
-      '<div class="lc-success-stage" aria-hidden="true">' +
-        '<span class="lc-success-burst burst-a"></span>' +
-        '<span class="lc-success-burst burst-b"></span>' +
-        '<span class="lc-success-spark spark-1"></span>' +
-        '<span class="lc-success-spark spark-2"></span>' +
-        '<span class="lc-success-spark spark-3"></span>' +
-        '<span class="lc-success-spark spark-4"></span>' +
-        '<span class="lc-success-spark spark-5"></span>' +
-        '<span class="lc-success-spark spark-6"></span>' +
-        '<div class="lc-success-icon">' +
-          '<svg viewBox="0 0 24 24" fill="none"><polyline points="4,12 9,17 20,7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        '</div>' +
-      '</div>' +
-      '<h2>' + _esc(t('success.title')) + '</h2>' +
-      '<p>' + _esc(t('success.sub')) + '</p>' +
-      '<div class="lc-success-detail">' +
-        '<div class="lc-success-row">' +
-          '<span class="lc-success-k">' + _esc(t('success.name')) + '</span>' +
-          '<span class="lc-success-v">' + _esc(state.name) + '</span>' +
-        '</div>' +
-        '<div class="lc-success-row">' +
-          '<span class="lc-success-k">' + _esc(t('success.phone')) + '</span>' +
-          '<span class="lc-success-v">' + _esc(_formatPhone(state.phone)) + '</span>' +
-        '</div>' +
-        '<div class="lc-success-row">' +
-          '<span class="lc-success-k">' + _esc(t('success.calltime')) + '</span>' +
-          '<span class="lc-success-v">' + _esc(t('s4.calltime.' + calltimeKey)) + '</span>' +
-        '</div>' +
-      '</div>' +
-      '<p class="lc-success-note">' + _esc(t('success.note')) + '</p>' +
-      '<div class="lc-success-actions">' +
-        (state.instagramUrl ? '<a href="' + _esc(state.instagramUrl) + '" class="lc-btn lc-btn-outline" target="_blank" rel="noopener" onclick="_track(\'instagram_link_clicked\')">' +
-          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>' +
-          _esc(t('success.ig')) + '</a>' : '') +
-        _waShareBtn() +
-      '</div>' +
-    '</div>'
-  );
-
-  document.getElementById('lc-topbar').hidden   = true;
-  document.getElementById('lc-score-bar').hidden = true;
-  document.getElementById('lc-trust').hidden     = true;
-}
 
 /* ── Lang switch ────────────────────────────────────────────── */
 function initLang() {
@@ -1659,7 +1453,6 @@ function initLang() {
       else if (s === 2)   renderStep2();
       else if (s === 3)   renderStep3();
       else if (s === 3.5) renderAnalysisResult();
-      else if (s === 4)   renderStep4();
     });
   });
 }
@@ -1721,7 +1514,6 @@ async function boot() {
     else if (s === 2)   renderStep2();
     else if (s === 3)   renderStep3();
     else if (s === 3.5 && state.analysisResult) renderAnalysisResult();
-    else if (s === 4)   renderStep4();
     else renderStep15();
   } else {
     renderStep1();

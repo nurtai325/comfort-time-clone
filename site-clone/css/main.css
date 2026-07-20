@@ -656,6 +656,22 @@ body {
 .lc-success-v { color: var(--c-navy); font-weight: 600; word-break: break-word; }
 .lc-success-note { font-size: 13px; color: var(--c-muted); line-height: 1.5; }
 .lc-success-actions { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+.lc-specialist-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #166534;
+  line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+.lc-specialist-note svg { flex-shrink: 0; margin-top: 1px; color: #16a34a; }
 
 /* ─── Offer checkbox ────────────────────────────────────────── */
 .lc-offer-row {
