@@ -182,13 +182,11 @@ const I18N = {
 function t(key) { return (I18N[state.lang] || I18N.ru)[key] || key; }
 
 /* ── KZ Cities ─────────────────────────────────────────────── */
-let KZ_CITIES = [
-  'Алматы','Астана','Шымкент','Актобе','Актау','Атырау',
-  'Қарағанды','Қостанай','Павлодар','Семей','Тараз','Өскемен',
-  'Орал','Петропавл','Қызылорда','Екібастұз','Рудный','Талдықорған',
-  'Темиртау','Туркестан','Жезқазған','Балқаш','Риддер',
-  'Шу','Жаңаөзен','Қонаев','Ленгір','Сатпаев',
-];
+let KZ_CITIES = ["Актау","Актобе","Алматы","Астана","Атырау","Балхаш","Жанаозен","Жезказган","Караганда","Конаев","Костанай","Кызылорда","Ленгер","Павлодар","Петропавловск","Риддер","Рудный","Сатпаев","Семей","Талдыкорган","Тараз","Темиртау","Туркестан","Уральск","Усть-Каменогорск","Шу","Шымкент","Экибастуз"];
+
+const BANKS = [{"id":1,"name_ru":"Отбасы банк","name_kk":"Отбасы банк","abbr":"ОБ","color":"#1a6f3c","logo_url":"https://hcsbk.kz/upload/iblock/861/k28qfspkdkp9ra6um45d12p8o4vqabc7.jpg"},{"id":2,"name_ru":"Халык Банк","name_kk":"Халық Банк","abbr":"ХБ","color":"#d4271b","logo_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAxDA1WOWjoCXQIVSuU4KOZEfSO9a0oVEbCw&s"},{"id":3,"name_ru":"БЦК","name_kk":"БЦК","abbr":"БЦК","color":"#004b8d","logo_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVH5SqS4lDY4T42ZXxJPXsrRDmQlRiS-2Rrg&s"},{"id":5,"name_ru":"Bereke Bank","name_kk":"Bereke Bank","abbr":"BB","color":"#7c3aed","logo_url":"https://img.forbes.kz/forbes-photobank/media/2024-06-10/cb12fcb4-d524-480f-839f-229e446762cf.webp"},{"id":6,"name_ru":"ForteBank","name_kk":"ForteBank","abbr":"FB","color":"#059669","logo_url":"https://avatars.mds.yandex.net/i?id=768b01d522c0d9a50af43cd19ab434890ffd4933-10917150-images-thumbs&n=13"},{"id":7,"name_ru":"Freedom Bank","name_kk":"Freedom Bank","abbr":"FR","color":"#0284c7","logo_url":"https://avatars.mds.yandex.net/i?id=bc49ed30294af42cee14956b849b98615fcfdd7c-5709069-images-thumbs&n=13"},{"id":8,"name_ru":"Bank RBK","name_kk":"Bank RBK","abbr":"RBK","color":"#dc2626","logo_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn4dfshyZLdJ_QU9vbigfXUZSeRYwJcuinfA&s"},{"id":9,"name_ru":"Нур-Банк","name_kk":"Нұр-Банк","abbr":"НБ","color":"#b45309","logo_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_0dcwCb0PB_mcwwKvmoNwh_odruS_DuLXA&s"}];
+
+const INSTAGRAM_URL = 'https://www.instagram.com/comfort_time.official/';
 
 /* ── State ──────────────────────────────────────────────────── */
 const SLUG = window.__LEAD_SLUG__ || document.body.dataset.slug || '';
@@ -200,7 +198,6 @@ const state = {
   step: 1,
   product: null,  /* 'mortgage' | 'credit' */
   phone: '',
-  clientToken: null,
   visitUid: _uid(),
   offerAccepted: true,
   name: '',
@@ -212,23 +209,17 @@ const state = {
   q1_when:     null,
   q1_period:   null,
   q2_has:      null,
-  q2_pct:      null,  /* 'under_1m' | 'from_1m_to_5m' | 'from_5m' */
+  q2_pct:      null,
   q3_official: null,
   q3_stable:   null,
   credit_income_range: null,
   credit_burden_status: null,
   /* analysis result (step 3.5) */
   analysisResult: null,
-  /* step 4 callback */
-  selectedCalltime: null,
-  /* config */
   score: 20,
-  banks: [],
-  branches: [],
-  instagramUrl: '',
+  banks: BANKS,
+  instagramUrl: INSTAGRAM_URL,
   abVariant: 'A',
-  visitSent: false,
-  booking: null,
 };
 
 /* ── Helpers ────────────────────────────────────────────────── */
@@ -239,7 +230,7 @@ function _uid() {
 function _save() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      step: state.step, product: state.product, phone: state.phone, clientToken: state.clientToken,
+      step: state.step, product: state.product, phone: state.phone,
       name: state.name, city: state.city, targetCity: state.targetCity,
       q1_active: state.q1_active, q1_past: state.q1_past,
       q1_when: state.q1_when, q1_period: state.q1_period,
@@ -248,7 +239,6 @@ function _save() {
       credit_income_range: state.credit_income_range,
       credit_burden_status: state.credit_burden_status,
       analysisResult: state.analysisResult,
-      selectedCalltime: state.selectedCalltime,
       score: state.score, lang: state.lang,
       visitUid: state.visitUid, abVariant: state.abVariant,
     }));
@@ -322,26 +312,20 @@ function _startAutoAssist(kind, seconds, callback) {
   tick();
 }
 
-function _api(method, path, body) {
-  const opts = { method, headers: { 'Content-Type': 'application/json' } };
-  if (body) opts.body = JSON.stringify(body);
-  return fetch(path, opts).then(async function(r) {
-    const json = await r.json().catch(function() { return {}; });
-    if (!r.ok) {
-      const detail = json.detail;
-      let msg;
-      if (Array.isArray(detail)) {
-        msg = detail.map(function(d) {
-          const field = d.loc ? d.loc[d.loc.length - 1] : '';
-          return field ? field + ': ' + d.msg : d.msg;
-        }).join('; ');
-      } else {
-        msg = String(detail || r.statusText);
-      }
-      throw new Error(msg);
-    }
-    return json;
-  });
+/* placeholder — replaced when Bitrix webhook is wired up */
+function _submitLead(payload) {
+  // TODO: POST lead data to Bitrix24 webhook
+  // fetch('https://yourcompany.bitrix24.com/rest/1/TOKEN/crm.lead.add.json', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({ fields: {
+  //     TITLE: 'Ипотека — ' + payload.phone,
+  //     NAME: payload.full_name,
+  //     PHONE: [{ VALUE: payload.phone, VALUE_TYPE: 'WORK' }],
+  //     COMMENTS: JSON.stringify(payload),
+  //   }}),
+  // }).catch(function() {});
+}
 }
 
 function _setScoreColor(arc, score) {
@@ -687,11 +671,6 @@ async function submitStep1() {
   btn.disabled = true;
   btn.innerHTML = '<div class="lc-spinner"></div>';
 
-  if (!state.visitSent) {
-    _api('POST', '/public/lead-capture/' + SLUG + '/visit', { visitor_uid: state.visitUid })
-      .then(function() { state.visitSent = true; _save(); })
-      .catch(function() {});
-  }
   const phoneNorm = digits.length === 10 ? '7' + digits : digits;
   state.phone = phoneNorm;
   state.score = 20;
@@ -1231,7 +1210,7 @@ function renderStep3() {
   document.getElementById('lc-s3-submit').addEventListener('click', submitStep3);
 }
 
-async function submitStep3() {
+async function submitStep3() {  /* async kept for the loading delay */
   const q1val = _computeQ1();
   const q2val = _isCredit() ? 'none' : _computeQ2();
   const q3val = _computeQ3();
@@ -1240,6 +1219,7 @@ async function submitStep3() {
   const errEl = document.getElementById('lc-q-err');
   if (!q1val || !q2val || !q3val || !q4val) { errEl.classList.add('visible'); return; }
   errEl.classList.remove('visible');
+
 
   const finalScore = _calcScore();
   state.score = Math.max(state.score, finalScore);
@@ -1262,41 +1242,21 @@ async function submitStep3() {
   document.getElementById('lc-topbar').hidden = true;
   document.getElementById('lc-score-bar').hidden = true;
 
-  const payload = {
+  _submitLead({
     phone: state.phone,
     full_name: state.name.trim(),
     city: state.city,
     target_city: state.targetCity,
     service_type: state.product,
     form_language: state.lang,
-    offer_accepted: state.offerAccepted,
-    visitor_uid: state.visitUid,
-    landing_version: state.abVariant,
     delinquency_status: q1val,
     down_payment_status: q2val,
-    down_payment_percent_range: (q2val && q2val !== 'none') ? q2val : null,
     income_confirmation_type: q3val,
-    monthly_income_status: _isCredit() ? q3val : null,
-    credit_income_range: _isCredit() ? q3val : null,
     credit_burden_status: q4val,
     preapproval_score: state.score,
-  };
+  });
 
-  try {
-    const res = await _api('POST', '/public/lead-capture/' + SLUG + '/submit', payload);
-    if (res && res.score_category) {
-      state.analysisResult = {
-        score_category: res.score_category,
-        matched_banks_count: res.matched_banks_count,
-        matched_programs_total: res.matched_programs_total,
-        matched_banks: res.matched_banks,
-      };
-    } else {
-      state.analysisResult = _localAnalysis(state.score);
-    }
-  } catch (err) {
-    state.analysisResult = _localAnalysis(state.score);
-  }
+  state.analysisResult = _localAnalysis(state.score);
 
   _track('step_3_completed', { step: 3, score: state.score });
   state.step = 3.5;
@@ -1445,23 +1405,8 @@ async function boot() {
   initLang();
   initOfferModal();
 
-  try {
-    const cfg = await _api('GET', '/public/lead-capture/' + SLUG);
-    state.banks       = cfg.banks       || [];
-    if (Array.isArray(cfg.city_options) && cfg.city_options.length) {
-      KZ_CITIES = cfg.city_options;
-    }
-    state.instagramUrl = cfg.instagram_reviews_url || '';
-    if (state.instagramUrl) {
-      const igLink = document.getElementById('lc-instagram-link');
-      if (igLink) igLink.href = state.instagramUrl;
-    }
-    if (!state.visitSent) {
-      _api('POST', '/public/lead-capture/' + SLUG + '/visit', { visitor_uid: state.visitUid })
-        .then(function() { state.visitSent = true; _save(); })
-        .catch(function() {});
-    }
-  } catch (_) {}
+  const igLink = document.getElementById('lc-instagram-link');
+  if (igLink) igLink.href = INSTAGRAM_URL;
 
   const s = state.step;
   if (state.phone && s >= 1.5) {
